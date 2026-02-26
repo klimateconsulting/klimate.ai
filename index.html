@@ -19,6 +19,7 @@
         /* ── Brand Tokens ── */
         :root {
             --kc-blue:        #0F4C81;
+            --kc-blue-dark:   #0a3a66;
             --kc-dark-green:  #162123;
             --kc-ag-green:    #70A288;
             --kc-energy-yellow: #FFAD05;
@@ -31,9 +32,12 @@
             --kc-light-brown: #EAE4E5;
             --white:          #FFFFFF;
             --black:          #000000;
+            --text-secondary: #5a6a6e;
 
             --font-heading: 'Space Grotesk', sans-serif;
             --font-body:    'Montserrat', sans-serif;
+
+            --max-w: 1140px;
         }
 
         html { scroll-behavior: smooth; }
@@ -46,213 +50,305 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── Header / Nav ── */
+        a { text-decoration: none; }
+
+        /* ── Header ── */
         header {
-            background: var(--kc-blue);
+            background: var(--white);
+            border-bottom: 1px solid #e8ecf0;
             padding: 0 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 12px rgba(15,76,129,0.15);
         }
         .header-inner {
-            max-width: 1200px;
+            max-width: var(--max-w);
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 68px;
+            height: 72px;
         }
         .logo-link {
             display: flex;
             align-items: center;
-            text-decoration: none;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
         .logo-link img {
-            height: 36px;
+            height: 32px;
             width: auto;
         }
         .logo-link .site-name {
             font-family: var(--font-heading);
             font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--white);
-            letter-spacing: 0.04em;
+            font-size: 1.1rem;
+            color: var(--kc-dark-green);
+            letter-spacing: 0.02em;
         }
         .logo-link .site-name .dot-ai {
-            color: var(--kc-energy-yellow);
+            color: var(--kc-blue);
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
         header nav a {
             font-family: var(--font-body);
             font-weight: 500;
-            font-size: 0.875rem;
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            letter-spacing: 0.03em;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
             transition: color 0.2s;
         }
-        header nav a:hover { color: var(--white); }
+        header nav a:hover { color: var(--kc-blue); }
+        .nav-cta {
+            background: var(--kc-blue);
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--kc-blue-dark) !important; color: var(--white) !important; }
 
         /* ── Hero ── */
         .hero {
-            background: linear-gradient(170deg, var(--kc-blue) 0%, #0a3a66 100%);
-            padding: 5rem 2rem 4.5rem;
-            text-align: center;
+            background: var(--kc-blue);
+            padding: 6rem 2rem 5rem;
             position: relative;
             overflow: hidden;
         }
         .hero::before {
             content: '';
             position: absolute;
-            top: -40%;
-            right: -15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255,173,5,0.06) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 80%, rgba(112,162,136,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 80% 20%, rgba(255,173,5,0.06) 0%, transparent 60%);
         }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(112,162,136,0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 3rem;
-            color: var(--white);
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-        }
-        .hero h1 .highlight {
-            color: var(--kc-energy-yellow);
-        }
-        .hero p {
-            font-family: var(--font-body);
-            font-weight: 300;
-            font-size: 1.125rem;
-            color: rgba(255,255,255,0.85);
-            max-width: 650px;
-            margin: 0 auto 2rem;
-            line-height: 1.7;
-        }
-        .hero .scroll-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: var(--font-body);
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: var(--kc-energy-yellow);
-            text-decoration: none;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: opacity 0.2s;
-        }
-        .hero .scroll-cta:hover { opacity: 0.8; }
-        .scroll-cta svg {
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(4px); }
-        }
-
-        /* ── About Strip ── */
-        .about {
-            background: var(--kc-bg-grey);
-            padding: 3.5rem 2rem;
-        }
-        .about-inner {
-            max-width: 1000px;
+        .hero-inner {
+            max-width: var(--max-w);
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2.75rem;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+        }
+        .hero-text p {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.02em;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--white);
+            color: var(--kc-blue);
+        }
+        .btn-primary:hover { background: var(--kc-bg-grey); }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255,255,255,0.35);
+        }
+        .btn-outline:hover { border-color: var(--white); }
+
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .hero-stat-row {
+            display: flex;
+            gap: 1rem;
+        }
+        .hero-stat {
+            flex: 1;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 1.25rem;
+            backdrop-filter: blur(8px);
+        }
+        .hero-stat .stat-value {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+        .hero-stat .stat-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* ── About / Intro ── */
+        .about {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .about-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
         }
         .about-text h2 {
             font-family: var(--font-heading);
             font-weight: 700;
-            font-size: 1.75rem;
-            color: var(--kc-blue);
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--kc-dark-green);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
         }
         .about-text p {
             font-size: 0.95rem;
-            color: var(--kc-dark-green);
-            line-height: 1.75;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
-        .about-icons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+        .about-text p:last-child { margin-bottom: 0; }
+        .about-text strong { color: var(--kc-dark-green); }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
         }
-        .about-icon-item {
-            text-align: center;
+        .focus-card {
+            background: var(--kc-bg-grey);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.2s;
         }
-        .about-icon-item img {
-            width: 56px;
-            height: 56px;
+        .focus-card:hover { transform: translateY(-2px); }
+        .focus-card img {
+            width: 40px;
+            height: 40px;
             object-fit: contain;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
-        .about-icon-item span {
-            display: block;
-            font-family: var(--font-body);
+        .focus-card h3 {
+            font-family: var(--font-heading);
             font-weight: 600;
-            font-size: 0.7rem;
-            color: var(--kc-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+            font-size: 0.95rem;
+            color: var(--kc-dark-green);
+            margin-bottom: 0.35rem;
+        }
+        .focus-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
         }
 
-        /* ── Projects Section ── */
-        .projects {
-            padding: 4.5rem 2rem 5rem;
-            background: var(--white);
-        }
-        .projects-inner {
-            max-width: 1100px;
+        /* ── Divider ── */
+        .divider {
+            max-width: var(--max-w);
             margin: 0 auto;
+            border: none;
+            border-top: 1px solid #e8ecf0;
         }
-        .section-header {
+
+        /* ── Data Lab Intro ── */
+        .lab-intro {
+            padding: 4rem 2rem 1rem;
+            background: var(--kc-bg-grey);
+        }
+        .lab-intro-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
             text-align: center;
-            margin-bottom: 3rem;
         }
-        .section-header h2 {
+        .lab-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--kc-light-yellow);
+            color: #9a6c00;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            margin-bottom: 1.25rem;
+        }
+        .lab-intro-inner h2 {
             font-family: var(--font-heading);
             font-weight: 700;
             font-size: 2rem;
             color: var(--kc-dark-green);
             margin-bottom: 0.75rem;
         }
-        .section-header p {
+        .lab-intro-inner > p {
             font-size: 0.95rem;
-            color: #5a6a6e;
-            max-width: 550px;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .lab-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+        }
+        .lab-note svg { flex-shrink: 0; }
+
+        /* ── Projects / Dashboards ── */
+        .projects {
+            padding: 2.5rem 2rem 5rem;
+            background: var(--kc-bg-grey);
+        }
+        .projects-inner {
+            max-width: var(--max-w);
             margin: 0 auto;
         }
-
-        /* ── Project Cards Grid ── */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.75rem;
         }
 
         .card {
@@ -261,18 +357,17 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
-            text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
         }
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(15,76,129,0.12);
+            box-shadow: 0 16px 40px rgba(15,76,129,0.10);
         }
 
         .card-banner {
-            height: 160px;
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -280,17 +375,22 @@
             overflow: hidden;
         }
         .card-banner .card-icon {
-            width: 64px;
-            height: 64px;
+            width: 56px;
+            height: 56px;
             object-fit: contain;
             position: relative;
             z-index: 1;
         }
-        .card-banner .banner-pattern {
+        .card-banner .banner-label {
             position: absolute;
-            inset: 0;
-            opacity: 0.07;
-            background-size: 30px 30px;
+            bottom: 1rem;
+            left: 1.25rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--white);
+            z-index: 2;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
 
         .card-body {
@@ -314,15 +414,30 @@
         .card-body h3 {
             font-family: var(--font-heading);
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--kc-dark-green);
             margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
         .card-body p {
-            font-size: 0.875rem;
-            color: #5a6a6e;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
             line-height: 1.65;
             flex: 1;
+        }
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .card-meta span {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: var(--kc-bg-grey);
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
         }
         .card-footer {
             display: flex;
@@ -334,103 +449,157 @@
         .card-status {
             font-size: 0.75rem;
             font-weight: 500;
-            color: #5a6a6e;
+            color: var(--text-secondary);
         }
         .card-status .dot {
             display: inline-block;
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            margin-right: 0.35rem;
+            margin-right: 0.4rem;
             vertical-align: middle;
         }
         .card-status .dot.live { background: var(--kc-ag-green); }
         .card-status .dot.wip { background: var(--kc-energy-yellow); }
-        .card-arrow {
+        .card-link-text {
+            font-size: 0.8rem;
+            font-weight: 600;
             color: var(--kc-blue);
-            transition: transform 0.2s;
-        }
-        .card:hover .card-arrow { transform: translateX(3px); }
-
-        /* Card Themes */
-        .card--water .card-banner { background: linear-gradient(135deg, #e8f4fd 0%, var(--kc-light-blue) 100%); }
-        .card--water .card-tag { background: var(--kc-bg-blue); color: var(--kc-blue); }
-        .card--water .banner-pattern {
-            background-image: radial-gradient(circle, var(--kc-blue) 1px, transparent 1px);
-        }
-
-        .card--food .card-banner { background: linear-gradient(135deg, #f0f7f3 0%, var(--kc-light-green) 100%); }
-        .card--food .card-tag { background: #e9f2ec; color: #4a8566; }
-        .card--food .banner-pattern {
-            background-image: radial-gradient(circle, var(--kc-ag-green) 1px, transparent 1px);
-        }
-
-        .card--energy .card-banner { background: linear-gradient(135deg, #fff9ed 0%, var(--kc-light-yellow) 100%); }
-        .card--energy .card-tag { background: #fff3d6; color: #b47a00; }
-        .card--energy .banner-pattern {
-            background-image: radial-gradient(circle, var(--kc-energy-yellow) 1px, transparent 1px);
-        }
-
-        .card--coming .card-banner { background: linear-gradient(135deg, var(--kc-bg-grey) 0%, #e8ecf0 100%); }
-        .card--coming .card-tag { background: #eaedf0; color: #6b7c85; }
-
-        /* ── WIP Banner ── */
-        .wip-banner {
-            background: var(--kc-light-yellow);
-            border-left: 4px solid var(--kc-energy-yellow);
-            max-width: 1100px;
-            margin: 0 auto 3rem;
-            padding: 1rem 1.5rem;
-            border-radius: 0 8px 8px 0;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.35rem;
+            transition: gap 0.2s;
         }
-        .wip-banner svg { flex-shrink: 0; }
-        .wip-banner p {
-            font-size: 0.85rem;
-            color: var(--kc-dark-green);
-            line-height: 1.5;
+        .card:hover .card-link-text { gap: 0.6rem; }
+
+        /* Card Themes */
+        .card--water .card-banner {
+            background: linear-gradient(135deg, #1a6baa 0%, var(--kc-blue) 50%, var(--kc-blue-dark) 100%);
+        }
+        .card--water .card-tag { background: var(--kc-bg-blue); color: var(--kc-blue); }
+
+        .card--food .card-banner {
+            background: linear-gradient(135deg, #88b89e 0%, var(--kc-ag-green) 50%, #5a8a72 100%);
+        }
+        .card--food .card-tag { background: #e9f2ec; color: #4a8566; }
+
+        .card--coming .card-banner {
+            background: linear-gradient(135deg, #c8cfd6 0%, #a8b2bc 100%);
+        }
+        .card--coming .card-tag { background: #eaedf0; color: #6b7c85; }
+
+        /* ── Main Site Link ── */
+        .site-link {
+            background: var(--white);
+            padding: 3.5rem 2rem;
+        }
+        .site-link-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            background: var(--kc-blue);
+            border-radius: 14px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-link-inner::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(255,173,5,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -40%);
+        }
+        .site-link-text {
+            position: relative;
+            z-index: 1;
+        }
+        .site-link-text h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .site-link-text p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 500px;
+        }
+        .site-link-inner .btn {
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
         }
 
         /* ── Footer ── */
         footer {
             background: var(--kc-dark-green);
-            padding: 2.5rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
         }
-        footer .footer-inner {
-            max-width: 800px;
+        .footer-inner {
+            max-width: var(--max-w);
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        footer img {
-            height: 28px;
-            margin-bottom: 1rem;
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
-        footer p {
+        .footer-left img {
+            height: 26px;
+        }
+        .footer-left p {
             font-size: 0.8rem;
-            color: rgba(255,255,255,0.5);
-            line-height: 1.6;
+            color: rgba(255,255,255,0.45);
+        }
+        .footer-right {
+            display: flex;
+            gap: 1.5rem;
         }
         footer a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            transition: color 0.2s;
         }
         footer a:hover { color: var(--white); }
 
         /* ── Responsive ── */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            .about-inner {
+        @media (max-width: 900px) {
+            .hero-inner {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .cards-grid {
+            .hero-text h1 { font-size: 2.25rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual { display: none; }
+            .about-inner {
                 grid-template-columns: 1fr;
             }
-            .header-inner { height: 56px; }
-            .logo-link img { height: 28px; }
+            .focus-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .site-link-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-text h1 { font-size: 1.75rem; }
+            .hero { padding: 4rem 1.5rem 3.5rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .focus-grid { grid-template-columns: 1fr; }
+            header nav { gap: 1rem; }
+            header nav a:not(.nav-cta) { display: none; }
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
@@ -440,116 +609,167 @@
     <header>
         <div class="header-inner">
             <a href="/" class="logo-link">
-                <img src="assets/images/logo-white.png" alt="Klimate Consulting">
-                <span class="site-name">klimate<span class="dot-ai">.ai</span></span>
+                <img src="assets/images/logo-blue.png" alt="Klimate Consulting">
             </a>
             <nav>
-                <a href="#projects">Dashboards</a>
+                <a href="#about">About</a>
+                <a href="#dashboards">Dashboards</a>
+                <a href="https://www.klimateconsulting.com" target="_blank" rel="noopener" class="nav-cta">Main Site</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Data-Driven Insights for<br><span class="highlight">Energy, Water & Food Systems</span></h1>
-            <p>Klimate Consulting is a sustainability consultancy with 12+ years of experience providing data-driven energy, water, and emissions optimization strategies to industrial, commercial, agricultural, and water sector clients. Led by Arian, an expert from LBNL and agtech, Klimate delivers practical, research-backed solutions tailored to each client's industry and operations.</p>
-            <a href="#projects" class="scroll-cta">
-                Explore Dashboards
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Research-Based Sustainability Data, Visualized</h1>
+                <p>Klimate Consulting is a sustainability consultancy with 12+ years of experience providing data-driven energy, water, and emissions optimization strategies to industrial, commercial, agricultural, and water sector clients.</p>
+                <div class="hero-buttons">
+                    <a href="#dashboards" class="btn btn-primary">Explore Dashboards</a>
+                    <a href="https://www.klimateconsulting.com" target="_blank" rel="noopener" class="btn btn-outline">Learn About Us</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <div class="stat-value">12+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Focus Sectors</div>
+                    </div>
+                </div>
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <div class="stat-value">11</div>
+                        <div class="stat-label">Federal Datasets</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">130+</div>
+                        <div class="stat-label">Years of Climate Data</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-inner">
             <div class="about-text">
-                <h2>Our Focus Areas</h2>
-                <p>Klimate Consulting works across four interconnected sectors&mdash;agriculture, water, energy, and food systems&mdash;helping clients reduce environmental impact while improving operational efficiency. Our data-first approach turns complex datasets into actionable intelligence.</p>
+                <h2>Practical, Research-Backed Solutions</h2>
+                <p>Klimate Consulting LLC (KC) offers a comprehensive suite of research, technical assistance, and consulting services specializing in the industrial, commercial, agricultural, and water sectors. The team provides in-depth technical analysis and tailored solutions on complex technical topics, leveraging strong data analysis skills and years of combined academic and industry experience.</p>
+                <p>As a technology-forward firm based in San Francisco, KC embraces cutting-edge tools&mdash;including AI-powered research synthesis, automated data analysis, and rapid software and web development&mdash;to deliver more value within constrained timelines and budgets. This site is our <strong>open data lab</strong>: a repository of side projects built using AI agents and public datasets that we're making freely available.</p>
             </div>
-            <div class="about-icons">
-                <div class="about-icon-item">
+            <div class="focus-grid">
+                <div class="focus-card">
                     <img src="assets/images/icon-agriculture.png" alt="Agriculture">
-                    <span>Agriculture</span>
+                    <h3>Agriculture</h3>
+                    <p>Farm production analytics, crop data, and agricultural census insights</p>
                 </div>
-                <div class="about-icon-item">
+                <div class="focus-card">
                     <img src="assets/images/icon-water.png" alt="Water">
-                    <span>Water</span>
+                    <h3>Water</h3>
+                    <p>Drought monitoring, reservoir tracking, and precipitation intelligence</p>
                 </div>
-                <div class="about-icon-item">
+                <div class="focus-card">
                     <img src="assets/images/icon-energy.png" alt="Energy">
-                    <span>Energy</span>
+                    <h3>Energy</h3>
+                    <p>Manufacturing energy consumption and building efficiency data</p>
                 </div>
-                <div class="about-icon-item">
+                <div class="focus-card">
                     <img src="assets/images/icon-food.png" alt="Food System">
-                    <span>Food System</span>
+                    <h3>Food System</h3>
+                    <p>Full value chain from farm to fork, including trade, access, and waste</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section class="projects" id="projects">
+    <hr class="divider">
+
+    <!-- Data Lab Intro -->
+    <section class="lab-intro" id="dashboards">
+        <div class="lab-intro-inner">
+            <div class="lab-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#9a6c00" stroke-width="1.2"/><path d="M6 3.5v3l2 1" stroke="#9a6c00" stroke-width="1.2" stroke-linecap="round"/></svg>
+                Work in Progress
+            </div>
+            <h2>Dashboards & Tools</h2>
+            <p>Interactive visualizations built from federal and state datasets. Each dashboard is a self-contained tool exploring a specific aspect of sustainability infrastructure.</p>
+            <div class="lab-note">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 13H1L8 1z" stroke="#FFAD05" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 6v3M8 11v.5" stroke="#FFAD05" stroke-width="1.2" stroke-linecap="round"/></svg>
+                These projects are continuously evolving. Built using AI-assisted workflows and open data sources.
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Cards -->
+    <section class="projects">
         <div class="projects-inner">
-            <div class="section-header">
-                <h2>Dashboards & Tools</h2>
-                <p>Our repository of side projects&mdash;built with AI agents and open data&mdash;visualizing topics we think are useful for the public.</p>
-            </div>
-
-            <div class="wip-banner">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#FFAD05" stroke-width="1.5"/><path d="M10 6v5M10 13.5v.5" stroke="#FFAD05" stroke-width="1.5" stroke-linecap="round"/></svg>
-                <p>This is a <strong>work in progress</strong>. We are continuously adding new dashboards and improving existing ones. All projects are open-source and built using AI-assisted workflows.</p>
-            </div>
-
             <div class="cards-grid">
 
                 <!-- California Water Dashboard -->
                 <a href="ca-water/" class="card card--water">
                     <div class="card-banner">
-                        <div class="banner-pattern"></div>
-                        <img src="assets/images/icon-water.png" alt="" class="card-icon">
+                        <img src="assets/images/icon-water.png" alt="" class="card-icon" style="filter: brightness(0) invert(1); opacity: 0.9;">
+                        <span class="banner-label">California Water Intelligence</span>
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Water</span>
                         <h3>California Water Intelligence Dashboard</h3>
-                        <p>Interactive visualizations of California's drought status, precipitation indices, reservoir storage levels, and water district boundaries. Sourced from NOAA, CDEC, and CA DWR.</p>
+                        <p>Drought conditions, precipitation indices for 3 regions, storage levels across 17 major reservoirs, and interactive maps of 1,900+ water districts.</p>
+                        <div class="card-meta">
+                            <span>NOAA</span>
+                            <span>CDEC</span>
+                            <span>CA DWR</span>
+                            <span>130+ Years</span>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <span class="card-status"><span class="dot live"></span>Live</span>
-                        <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="card-link-text">Open Dashboard <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                     </div>
                 </a>
 
                 <!-- Food & Ag Value Chain Dashboard -->
                 <a href="food-ag/" class="card card--food">
                     <div class="card-banner">
-                        <div class="banner-pattern"></div>
-                        <img src="assets/images/icon-food.png" alt="" class="card-icon">
+                        <img src="assets/images/icon-food.png" alt="" class="card-icon" style="filter: brightness(0) invert(1); opacity: 0.9;">
+                        <span class="banner-label">U.S. Food & Ag Value Chain</span>
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Food System</span>
                         <h3>U.S. Food & Agriculture Value Chain</h3>
-                        <p>End-to-end view of the U.S. food system&mdash;from farm production and manufacturing to distribution, retail, trade, food access, and waste&mdash;using 11 federal datasets.</p>
+                        <p>End-to-end view of the U.S. food system across 8 dimensions: farm production, manufacturing, distribution, retail, trade, food access, and waste.</p>
+                        <div class="card-meta">
+                            <span>USDA</span>
+                            <span>Census</span>
+                            <span>EPA</span>
+                            <span>EIA</span>
+                            <span>11 Datasets</span>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <span class="card-status"><span class="dot live"></span>Live</span>
-                        <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="card-link-text">Open Dashboard <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                     </div>
                 </a>
 
-                <!-- Coming Soon Placeholder -->
-                <div class="card card--coming" style="opacity: 0.6; cursor: default;">
+                <!-- Coming Soon -->
+                <div class="card card--coming" style="opacity: 0.55; cursor: default;">
                     <div class="card-banner">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#aab4bc" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M24 16v8l5 3" stroke="#aab4bc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M24 16v8l5 3" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Coming Soon</span>
-                        <h3>More Dashboards on the Way</h3>
-                        <p>We're working on additional tools covering energy benchmarking, emissions tracking, and agricultural water use optimization. Stay tuned.</p>
+                        <h3>More Dashboards Ahead</h3>
+                        <p>Energy benchmarking, emissions tracking, and agricultural water use optimization tools are in the pipeline.</p>
                     </div>
                     <div class="card-footer">
-                        <span class="card-status"><span class="dot wip"></span>In Progress</span>
+                        <span class="card-status"><span class="dot wip"></span>In Development</span>
                         <span></span>
                     </div>
                 </div>
@@ -558,12 +778,28 @@
         </div>
     </section>
 
+    <!-- CTA Banner -->
+    <section class="site-link">
+        <div class="site-link-inner">
+            <div class="site-link-text">
+                <h3>Visit Klimate Consulting</h3>
+                <p>Learn more about our services, team, and sustainability projects on our main website.</p>
+            </div>
+            <a href="https://www.klimateconsulting.com" target="_blank" rel="noopener" class="btn btn-primary">klimateconsulting.com</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
-            <img src="assets/images/logo-white.png" alt="Klimate Consulting">
-            <p>&copy; 2025 Klimate Consulting. All rights reserved.<br>
-            <a href="https://www.klimate.consulting" target="_blank" rel="noopener">klimate.consulting</a></p>
+            <div class="footer-left">
+                <img src="assets/images/logo-white.png" alt="Klimate Consulting">
+                <p>&copy; 2025 Klimate Consulting. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.klimateconsulting.com" target="_blank" rel="noopener">Main Site</a>
+                <a href="mailto:info@klimate.consulting">Contact</a>
+            </div>
         </div>
     </footer>
 
