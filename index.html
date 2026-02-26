@@ -601,9 +601,23 @@
             header nav a:not(.nav-cta) { display: none; }
             .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
         }
+        /* Mobile popup */
+        .mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; padding: 1.5rem; }
+        .mobile-popup { background: white; border-radius: 16px; padding: 2rem; max-width: 340px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .mobile-popup h3 { font-size: 1.1rem; font-weight: 600; color: #162123; margin-bottom: 0.75rem; }
+        .mobile-popup p { font-size: 0.85rem; color: #5a6a6e; line-height: 1.5; margin-bottom: 1.25rem; }
+        .mobile-popup button { background: #0F4C81; color: white; border: none; padding: 0.6rem 1.5rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; cursor: pointer; font-family: var(--font-body); }
+        @media (max-width: 768px) { .mobile-overlay { display: flex; } }
     </style>
 </head>
 <body>
+    <div class="mobile-overlay" id="mobilePopup">
+        <div class="mobile-popup">
+            <h3>Desktop Recommended</h3>
+            <p>Our dashboards are currently designed for desktop users and may not appear as intended on mobile devices.</p>
+            <button onclick="document.getElementById('mobilePopup').style.display='none'">Got it</button>
+        </div>
+    </div>
 
     <!-- Header -->
     <header>
