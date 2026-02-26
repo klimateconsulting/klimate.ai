@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "vintage": "EPA 2019, ReFED 2022",
+    "source": "EPA Wasted Food Report & ReFED",
+    "naics": []
+  },
+  "kpis": [
+    {
+      "id": "waste_kpi_1",
+      "label": "Total Surplus Food",
+      "value": "89M",
+      "unit": "tons",
+      "trend": "up",
+      "trendPct": "",
+      "source": "ReFED 2022"
+    },
+    {
+      "id": "waste_kpi_2",
+      "label": "Financial Value",
+      "value": "$156.0B",
+      "unit": "",
+      "trend": "up",
+      "trendPct": "",
+      "source": "ReFED 2022"
+    },
+    {
+      "id": "waste_kpi_3",
+      "label": "Largest Sector",
+      "value": "Farm / Agriculture (produce)",
+      "unit": "17.0%",
+      "trend": "up",
+      "trendPct": "",
+      "source": "ReFED 2022"
+    }
+  ],
+  "timeSeries": [
+    {
+      "year": 2019,
+      "waste_generated": 106.0,
+      "waste_managed": 106.0
+    },
+    {
+      "year": 2022,
+      "waste_generated": 88.8,
+      "waste_managed": 88.8
+    }
+  ],
+  "wasteBySector": [
+    {
+      "name": "Farm / Agriculture (produce)",
+      "value": 17.0,
+      "wasteMT": 14.9
+    },
+    {
+      "name": "Food & Bev Manufacturing",
+      "value": 15.0,
+      "wasteMT": 13.1
+    },
+    {
+      "name": "Food Service (restaurants / catering)",
+      "value": 15.0,
+      "wasteMT": 13.0
+    },
+    {
+      "name": "Food Retail (grocery / supermarkets)",
+      "value": 6.0,
+      "wasteMT": 5.0
+    },
+    {
+      "name": "Residential / Consumer",
+      "value": 49.0,
+      "wasteMT": 42.8
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimate.ai | Klimate Consulting Data Lab</title>
+    <meta name="description" content="Open-source data dashboards and visualization tools from Klimate Consulting. Explore California water intelligence, food & agriculture value chain analytics, and more.">
+    <meta property="og:title" content="Klimate.ai | Klimate Consulting Data Lab">
+    <meta property="og:description" content="Open-source data dashboards and visualization tools from Klimate Consulting.">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Reset ── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ── Brand Tokens ── */
+        :root {
+            --kc-blue:        #0F4C81;
+            --kc-dark-green:  #162123;
+            --kc-ag-green:    #70A288;
+            --kc-energy-yellow: #FFAD05;
+            --kc-carbon-brown: #220C10;
+            --kc-bg-blue:     #D3EBFB;
+            --kc-bg-grey:     #F3F5F8;
+            --kc-light-blue:  #C3D2DF;
+            --kc-light-green: #DBE8E1;
+            --kc-light-yellow:#FFEBC0;
+            --kc-light-brown: #EAE4E5;
+            --white:          #FFFFFF;
+            --black:          #000000;
+
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body:    'Montserrat', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--kc-dark-green);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Header / Nav ── */
+        header {
+            background: var(--kc-blue);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(15,76,129,0.15);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 0.75rem;
+        }
+        .logo-link img {
+            height: 36px;
+            width: auto;
+        }
+        .logo-link .site-name {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--white);
+            letter-spacing: 0.04em;
+        }
+        .logo-link .site-name .dot-ai {
+            color: var(--kc-energy-yellow);
+        }
+        header nav a {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: color 0.2s;
+        }
+        header nav a:hover { color: var(--white); }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(170deg, var(--kc-blue) 0%, #0a3a66 100%);
+            padding: 5rem 2rem 4.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,173,5,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(112,162,136,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 3rem;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 .highlight {
+            color: var(--kc-energy-yellow);
+        }
+        .hero p {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .hero .scroll-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--kc-energy-yellow);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+        .hero .scroll-cta:hover { opacity: 0.8; }
+        .scroll-cta svg {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+
+        /* ── About Strip ── */
+        .about {
+            background: var(--kc-bg-grey);
+            padding: 3.5rem 2rem;
+        }
+        .about-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: var(--kc-blue);
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 0.95rem;
+            color: var(--kc-dark-green);
+            line-height: 1.75;
+        }
+        .about-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .about-icon-item {
+            text-align: center;
+        }
+        .about-icon-item img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+        .about-icon-item span {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.7rem;
+            color: var(--kc-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── Projects Section ── */
+        .projects {
+            padding: 4.5rem 2rem 5rem;
+            background: var(--white);
+        }
+        .projects-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--kc-dark-green);
+            margin-bottom: 0.75rem;
+        }
+        .section-header p {
+            font-size: 0.95rem;
+            color: #5a6a6e;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* ── Project Cards Grid ── */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(15,76,129,0.12);
+        }
+
+        .card-banner {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-banner .card-icon {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+        .card-banner .banner-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.07;
+            background-size: 30px 30px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            width: fit-content;
+        }
+        .card-body h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--kc-dark-green);
+            margin-bottom: 0.5rem;
+        }
+        .card-body p {
+            font-size: 0.875rem;
+            color: #5a6a6e;
+            line-height: 1.65;
+            flex: 1;
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #f0f3f6;
+        }
+        .card-status {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #5a6a6e;
+        }
+        .card-status .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 0.35rem;
+            vertical-align: middle;
+        }
+        .card-status .dot.live { background: var(--kc-ag-green); }
+        .card-status .dot.wip { background: var(--kc-energy-yellow); }
+        .card-arrow {
+            color: var(--kc-blue);
+            transition: transform 0.2s;
+        }
+        .card:hover .card-arrow { transform: translateX(3px); }
+
+        /* Card Themes */
+        .card--water .card-banner { background: linear-gradient(135deg, #e8f4fd 0%, var(--kc-light-blue) 100%); }
+        .card--water .card-tag { background: var(--kc-bg-blue); color: var(--kc-blue); }
+        .card--water .banner-pattern {
+            background-image: radial-gradient(circle, var(--kc-blue) 1px, transparent 1px);
+        }
+
+        .card--food .card-banner { background: linear-gradient(135deg, #f0f7f3 0%, var(--kc-light-green) 100%); }
+        .card--food .card-tag { background: #e9f2ec; color: #4a8566; }
+        .card--food .banner-pattern {
+            background-image: radial-gradient(circle, var(--kc-ag-green) 1px, transparent 1px);
+        }
+
+        .card--energy .card-banner { background: linear-gradient(135deg, #fff9ed 0%, var(--kc-light-yellow) 100%); }
+        .card--energy .card-tag { background: #fff3d6; color: #b47a00; }
+        .card--energy .banner-pattern {
+            background-image: radial-gradient(circle, var(--kc-energy-yellow) 1px, transparent 1px);
+        }
+
+        .card--coming .card-banner { background: linear-gradient(135deg, var(--kc-bg-grey) 0%, #e8ecf0 100%); }
+        .card--coming .card-tag { background: #eaedf0; color: #6b7c85; }
+
+        /* ── WIP Banner ── */
+        .wip-banner {
+            background: var(--kc-light-yellow);
+            border-left: 4px solid var(--kc-energy-yellow);
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .wip-banner svg { flex-shrink: 0; }
+        .wip-banner p {
+            font-size: 0.85rem;
+            color: var(--kc-dark-green);
+            line-height: 1.5;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--kc-dark-green);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+        footer .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer img {
+            height: 28px;
+            margin-bottom: 1rem;
+        }
+        footer p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--white); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .about-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-inner { height: 56px; }
+            .logo-link img { height: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo-link">
+                <img src="assets/images/logo-white.png" alt="Klimate Consulting">
+                <span class="site-name">klimate<span class="dot-ai">.ai</span></span>
+            </a>
+            <nav>
+                <a href="#projects">Dashboards</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Data-Driven Insights for<br><span class="highlight">Energy, Water & Food Systems</span></h1>
+            <p>Klimate Consulting is a sustainability consultancy with 12+ years of experience providing data-driven energy, water, and emissions optimization strategies to industrial, commercial, agricultural, and water sector clients. Led by Arian, an expert from LBNL and agtech, Klimate delivers practical, research-backed solutions tailored to each client's industry and operations.</p>
+            <a href="#projects" class="scroll-cta">
+                Explore Dashboards
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>Our Focus Areas</h2>
+                <p>Klimate Consulting works across four interconnected sectors&mdash;agriculture, water, energy, and food systems&mdash;helping clients reduce environmental impact while improving operational efficiency. Our data-first approach turns complex datasets into actionable intelligence.</p>
+            </div>
+            <div class="about-icons">
+                <div class="about-icon-item">
+                    <img src="assets/images/icon-agriculture.png" alt="Agriculture">
+                    <span>Agriculture</span>
+                </div>
+                <div class="about-icon-item">
+                    <img src="assets/images/icon-water.png" alt="Water">
+                    <span>Water</span>
+                </div>
+                <div class="about-icon-item">
+                    <img src="assets/images/icon-energy.png" alt="Energy">
+                    <span>Energy</span>
+                </div>
+                <div class="about-icon-item">
+                    <img src="assets/images/icon-food.png" alt="Food System">
+                    <span>Food System</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="projects-inner">
+            <div class="section-header">
+                <h2>Dashboards & Tools</h2>
+                <p>Our repository of side projects&mdash;built with AI agents and open data&mdash;visualizing topics we think are useful for the public.</p>
+            </div>
+
+            <div class="wip-banner">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#FFAD05" stroke-width="1.5"/><path d="M10 6v5M10 13.5v.5" stroke="#FFAD05" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <p>This is a <strong>work in progress</strong>. We are continuously adding new dashboards and improving existing ones. All projects are open-source and built using AI-assisted workflows.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <!-- California Water Dashboard -->
+                <a href="ca-water/" class="card card--water">
+                    <div class="card-banner">
+                        <div class="banner-pattern"></div>
+                        <img src="assets/images/icon-water.png" alt="" class="card-icon">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Water</span>
+                        <h3>California Water Intelligence Dashboard</h3>
+                        <p>Interactive visualizations of California's drought status, precipitation indices, reservoir storage levels, and water district boundaries. Sourced from NOAA, CDEC, and CA DWR.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-status"><span class="dot live"></span>Live</span>
+                        <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </a>
+
+                <!-- Food & Ag Value Chain Dashboard -->
+                <a href="food-ag/" class="card card--food">
+                    <div class="card-banner">
+                        <div class="banner-pattern"></div>
+                        <img src="assets/images/icon-food.png" alt="" class="card-icon">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Food System</span>
+                        <h3>U.S. Food & Agriculture Value Chain</h3>
+                        <p>End-to-end view of the U.S. food system&mdash;from farm production and manufacturing to distribution, retail, trade, food access, and waste&mdash;using 11 federal datasets.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-status"><span class="dot live"></span>Live</span>
+                        <svg class="card-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </a>
+
+                <!-- Coming Soon Placeholder -->
+                <div class="card card--coming" style="opacity: 0.6; cursor: default;">
+                    <div class="card-banner">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#aab4bc" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M24 16v8l5 3" stroke="#aab4bc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Coming Soon</span>
+                        <h3>More Dashboards on the Way</h3>
+                        <p>We're working on additional tools covering energy benchmarking, emissions tracking, and agricultural water use optimization. Stay tuned.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-status"><span class="dot wip"></span>In Progress</span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <img src="assets/images/logo-white.png" alt="Klimate Consulting">
+            <p>&copy; 2025 Klimate Consulting. All rights reserved.<br>
+            <a href="https://www.klimate.consulting" target="_blank" rel="noopener">klimate.consulting</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "vintage": "Ag Census 2022, CBP 2023, Food Dollar 2023",
+    "source": "USDA ERS, USDA NASS, U.S. Census Bureau",
+    "naics": [
+      "311",
+      "312",
+      "424",
+      "445",
+      "484",
+      "493",
+      "722"
+    ]
+  },
+  "kpis": [
+    {
+      "id": "kpi_1",
+      "label": "Total U.S. Establishments",
+      "value": "3.1M",
+      "unit": "businesses",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023, Ag Census"
+    },
+    {
+      "id": "kpi_2",
+      "label": "Value Chain Employment",
+      "value": "27.1M",
+      "unit": "jobs + producers",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023, Ag Census"
+    },
+    {
+      "id": "kpi_3",
+      "label": "Total Sector Payroll",
+      "value": "$912.6B",
+      "unit": "(excl. farms)",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023"
+    },
+    {
+      "id": "kpi_4",
+      "label": "Farm Share of Food Dollar",
+      "value": "7.8\u00a2",
+      "unit": "",
+      "trend": "down",
+      "trendPct": "",
+      "source": "USDA ERS 2023"
+    }
+  ],
+  "national": {
+    "total_establishments": 3132929,
+    "total_employment": 27051986,
+    "total_payroll": 912551104000
+  },
+  "byState": [
+    {
+      "stateFips": "01",
+      "name": "Alabama",
+      "value": 14852,
+      "employment": 327276,
+      "payroll": 10647454000
+    },
+    {
+      "stateFips": "02",
+      "name": "Alaska",
+      "value": 2894,
+      "employment": 46346,
+      "payroll": 2061581000
+    },
+    {
+      "stateFips": "04",
+      "name": "Arizona",
+      "value": 20439,
+      "employment": 467966,
+      "payroll": 16507630000
+    },
+    {
+      "stateFips": "05",
+      "name": "Arkansas",
+      "value": 9943,
+      "employment": 247088,
+      "payroll": 9427038000
+    },
+    {
+      "stateFips": "06",
+      "name": "California",
+      "value": 161297,
+      "employment": 2842175,
+      "payroll": 124841615000
+    },
+    {
+      "stateFips": "08",
+      "name": "Colorado",
+      "value": 22442,
+      "employment": 422543,
+      "payroll": 16306011000
+    },
+    {
+      "stateFips": "09",
+      "name": "Connecticut",
+      "value": 13675,
+      "employment": 227333,
+      "payroll": 9627865000
+    },
+    {
+      "stateFips": "10",
+      "name": "Delaware",
+      "value": 3870,
+      "employment": 84991,
+      "payroll": 4240362000
+    },
+    {
+      "stateFips": "11",
+      "name": "District of Columbia",
+      "value": 3474,
+      "employment": 69495,
+      "payroll": 2467466000
+    },
+    {
+      "stateFips": "12",
+      "name": "Florida",
+      "value": 77001,
+      "employment": 1458705,
+      "payroll": 49610953000
+    },
+    {
+      "stateFips": "13",
+      "name": "Georgia",
+      "value": 38351,
+      "employment": 866129,
+      "payroll": 30791982000
+    },
+    {
+      "stateFips": "15",
+      "name": "Hawaii",
+      "value": 5565,
+      "employment": 97923,
+      "payroll": 3607223000
+    },
+    {
+      "stateFips": "16",
+      "name": "Idaho",
+      "value": 7354,
+      "employment": 135622,
+      "payroll": 4827320000
+    },
+    {
+      "stateFips": "17",
+      "name": "Illinois",
+      "value": 57340,
+      "employment": 990710,
+      "payroll": 44461368000
+    },
+    {
+      "stateFips": "18",
+      "name": "Indiana",
+      "value": 23574,
+      "employment": 506435,
+      "payroll": 18550431000
+    },
+    {
+      "stateFips": "19",
+      "name": "Iowa",
+      "value": 13638,
+      "employment": 298593,
+      "payroll": 12059897000
+    },
+    {
+      "stateFips": "20",
+      "name": "Kansas",
+      "value": 11273,
+      "employment": 244023,
+      "payroll": 9276828000
+    },
+    {
+      "stateFips": "21",
+      "name": "Kentucky",
+      "value": 13592,
+      "employment": 318798,
+      "payroll": 11381865000
+    },
+    {
+      "stateFips": "22",
+      "name": "Louisiana",
+      "value": 15445,
+      "employment": 291328,
+      "payroll": 9403820000
+    },
+    {
+      "stateFips": "23",
+      "name": "Maine",
+      "value": 5951,
+      "employment": 91338,
+      "payroll": 3585539000
+    },
+    {
+      "stateFips": "24",
+      "name": "Maryland",
+      "value": 20160,
+      "employment": 384861,
+      "payroll": 14214535000
+    },
+    {
+      "stateFips": "25",
+      "name": "Massachusetts",
+      "value": 27504,
+      "employment": 512711,
+      "payroll": 23870672000
+    },
+    {
+      "stateFips": "26",
+      "name": "Michigan",
+      "value": 34588,
+      "employment": 605476,
+      "payroll": 21172926000
+    },
+    {
+      "stateFips": "27",
+      "name": "Minnesota",
+      "value": 19994,
+      "employment": 415206,
+      "payroll": 16384452000
+    },
+    {
+      "stateFips": "28",
+      "name": "Mississippi",
+      "value": 9572,
+      "employment": 203643,
+      "payroll": 6292427000
+    },
+    {
+      "stateFips": "29",
+      "name": "Missouri",
+      "value": 21305,
+      "employment": 462155,
+      "payroll": 16581748000
+    },
+    {
+      "stateFips": "30",
+      "name": "Montana",
+      "value": 5258,
+      "employment": 72868,
+      "payroll": 2304652000
+    },
+    {
+      "stateFips": "31",
+      "name": "Nebraska",
+      "value": 8883,
+      "employment": 177813,
+      "payroll": 7070277000
+    },
+    {
+      "stateFips": "32",
+      "name": "Nevada",
+      "value": 11186,
+      "employment": 241491,
+      "payroll": 8478819000
+    },
+    {
+      "stateFips": "33",
+      "name": "New Hampshire",
+      "value": 5122,
+      "employment": 96182,
+      "payroll": 3280969000
+    },
+    {
+      "stateFips": "34",
+      "name": "New Jersey",
+      "value": 40371,
+      "employment": 688905,
+      "payroll": 38186479000
+    },
+    {
+      "stateFips": "35",
+      "name": "New Mexico",
+      "value": 6103,
+      "employment": 122513,
+      "payroll": 3802871000
+    },
+    {
+      "stateFips": "36",
+      "name": "New York",
+      "value": 90910,
+      "employment": 1222923,
+      "payroll": 51583173000
+    },
+    {
+      "stateFips": "37",
+      "name": "North Carolina",
+      "value": 35992,
+      "employment": 809946,
+      "payroll": 27195151000
+    },
+    {
+      "stateFips": "38",
+      "name": "North Dakota",
+      "value": 4223,
+      "employment": 61793,
+      "payroll": 2654756000
+    },
+    {
+      "stateFips": "39",
+      "name": "Ohio",
+      "value": 39828,
+      "employment": 877390,
+      "payroll": 30822107000
+    },
+    {
+      "stateFips": "40",
+      "name": "Oklahoma",
+      "value": 12825,
+      "employment": 251915,
+      "payroll": 7962845000
+    },
+    {
+      "stateFips": "41",
+      "name": "Oregon",
+      "value": 18631,
+      "employment": 308930,
+      "payroll": 11882904000
+    },
+    {
+      "stateFips": "42",
+      "name": "Pennsylvania",
+      "value": 46642,
+      "employment": 927299,
+      "payroll": 36313880000
+    },
+    {
+      "stateFips": "44",
+      "name": "Rhode Island",
+      "value": 4771,
+      "employment": 74070,
+      "payroll": 2604869000
+    },
+    {
+      "stateFips": "45",
+      "name": "South Carolina",
+      "value": 17801,
+      "employment": 372331,
+      "payroll": 11481120000
+    },
+    {
+      "stateFips": "46",
+      "name": "South Dakota",
+      "value": 4383,
+      "employment": 72166,
+      "payroll": 2673962000
+    },
+    {
+      "stateFips": "47",
+      "name": "Tennessee",
+      "value": 22408,
+      "employment": 557493,
+      "payroll": 20657231000
+    },
+    {
+      "stateFips": "48",
+      "name": "Texas",
+      "value": 100053,
+      "employment": 2174239,
+      "payroll": 78236469000
+    },
+    {
+      "stateFips": "49",
+      "name": "Utah",
+      "value": 10551,
+      "employment": 241291,
+      "payroll": 8875267000
+    },
+    {
+      "stateFips": "50",
+      "name": "Vermont",
+      "value": 2738,
+      "employment": 44714,
+      "payroll": 1670643000
+    },
+    {
+      "stateFips": "51",
+      "name": "Virginia",
+      "value": 28015,
+      "employment": 571085,
+      "payroll": 19324728000
+    },
+    {
+      "stateFips": "53",
+      "name": "Washington",
+      "value": 29386,
+      "employment": 494605,
+      "payroll": 20799844000
+    },
+    {
+      "stateFips": "54",
+      "name": "West Virginia",
+      "value": 5023,
+      "employment": 85964,
+      "payroll": 2388246000
+    },
+    {
+      "stateFips": "55",
+      "name": "Wisconsin",
+      "value": 23531,
+      "employment": 474192,
+      "payroll": 18809370000
+    },
+    {
+      "stateFips": "56",
+      "name": "Wyoming",
+      "value": 2715,
+      "employment": 36673,
+      "payroll": 1289464000
+    }
+  ],
+  "bySubsector": [
+    {
+      "id": "production",
+      "name": "Farm Production",
+      "establishments": 1900487,
+      "employment": 3374326,
+      "payroll": 0
+    },
+    {
+      "id": "processing",
+      "name": "Food Processing",
+      "establishments": 43707,
+      "employment": 1998421,
+      "payroll": 112495926000
+    },
+    {
+      "id": "distribution",
+      "name": "Distribution & Trade",
+      "establishments": 313905,
+      "employment": 5700514,
+      "payroll": 390083292000
+    },
+    {
+      "id": "retail",
+      "name": "Retail & Food Service",
+      "establishments": 874830,
+      "employment": 15978725,
+      "payroll": 409971886000
+    }
+  ],
+  "timeSeries": [
+    {
+      "year": 1993,
+      "farm": 5.3,
+      "agribusiness": 3.5,
+      "processing": 12.5,
+      "packaging": 4.8,
+      "transportation": 3.2,
+      "energy": 3.0,
+      "financeInsurance": 3.8,
+      "retail": 35.2,
+      "foodService": 24.1,
+      "other": 4.6
+    },
+    {
+      "year": 2000,
+      "farm": 5.2,
+      "agribusiness": 3.3,
+      "processing": 12.9,
+      "packaging": 5.1,
+      "transportation": 3.5,
+      "energy": 3.2,
+      "financeInsurance": 4.0,
+      "retail": 34.8,
+      "foodService": 23.5,
+      "other": 4.5
+    },
+    {
+      "year": 2005,
+      "farm": 5.1,
+      "agribusiness": 3.4,
+      "processing": 13.2,
+      "packaging": 5.2,
+      "transportation": 3.8,
+      "energy": 3.8,
+      "financeInsurance": 4.1,
+      "retail": 33.9,
+      "foodService": 23.0,
+      "other": 4.5
+    },
+    {
+      "year": 2010,
+      "farm": 7.3,
+      "agribusiness": 4.0,
+      "processing": 14.5,
+      "packaging": 5.3,
+      "transportation": 4.1,
+      "energy": 4.5,
+      "financeInsurance": 4.3,
+      "retail": 31.5,
+      "foodService": 20.8,
+      "other": 3.7
+    },
+    {
+      "year": 2015,
+      "farm": 8.1,
+      "agribusiness": 4.2,
+      "processing": 14.8,
+      "packaging": 5.4,
+      "transportation": 4.2,
+      "energy": 4.0,
+      "financeInsurance": 4.5,
+      "retail": 31.0,
+      "foodService": 20.0,
+      "other": 3.8
+    },
+    {
+      "year": 2019,
+      "farm": 7.8,
+      "agribusiness": 4.1,
+      "processing": 15.1,
+      "packaging": 5.5,
+      "transportation": 4.4,
+      "energy": 3.8,
+      "financeInsurance": 4.6,
+      "retail": 32.0,
+      "foodService": 19.0,
+      "other": 3.7
+    },
+    {
+      "year": 2020,
+      "farm": 8.5,
+      "agribusiness": 4.3,
+      "processing": 16.2,
+      "packaging": 5.8,
+      "transportation": 4.2,
+      "energy": 3.5,
+      "financeInsurance": 4.8,
+      "retail": 32.5,
+      "foodService": 16.5,
+      "other": 3.7
+    },
+    {
+      "year": 2021,
+      "farm": 8.2,
+      "agribusiness": 4.2,
+      "processing": 15.8,
+      "packaging": 5.6,
+      "transportation": 4.5,
+      "energy": 4.0,
+      "financeInsurance": 4.7,
+      "retail": 32.2,
+      "foodService": 17.2,
+      "other": 3.6
+    },
+    {
+      "year": 2022,
+      "farm": 7.9,
+      "agribusiness": 4.0,
+      "processing": 15.5,
+      "packaging": 5.5,
+      "transportation": 4.6,
+      "energy": 4.8,
+      "financeInsurance": 4.6,
+      "retail": 32.5,
+      "foodService": 17.0,
+      "other": 3.6
+    },
+    {
+      "year": 2023,
+      "farm": 7.8,
+      "agribusiness": 4.0,
+      "processing": 15.3,
+      "packaging": 5.4,
+      "transportation": 4.5,
+      "energy": 4.2,
+      "financeInsurance": 4.6,
+      "retail": 33.0,
+      "foodService": 18.0,
+      "other": 3.2
+    }
+  ],
+  "sankey": {
+    "nodes": [
+      {
+        "name": "Farm"
+      },
+      {
+        "name": "Imports"
+      },
+      {
+        "name": "Processing"
+      },
+      {
+        "name": "Distribution"
+      },
+      {
+        "name": "Retail"
+      },
+      {
+        "name": "Food Service"
+      },
+      {
+        "name": "Consumers"
+      },
+      {
+        "name": "Food Consumed"
+      },
+      {
+        "name": "Farm Waste"
+      },
+      {
+        "name": "Processing Waste"
+      },
+      {
+        "name": "Retail Waste"
+      },
+      {
+        "name": "Food Svc Waste"
+      },
+      {
+        "name": "Consumer Waste"
+      }
+    ],
+    "links": [
+      {
+        "source": 0,
+        "target": 2,
+        "value": 66
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "value": 28
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "value": 89
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "value": 46
+      },
+      {
+        "source": 3,
+        "target": 5,
+        "value": 43
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "value": 44
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "value": 38
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "value": 65
+      },
+      {
+        "source": 0,
+        "target": 8,
+        "value": 6
+      },
+      {
+        "source": 2,
+        "target": 9,
+        "value": 5
+      },
+      {
+        "source": 4,
+        "target": 10,
+        "value": 2
+      },
+      {
+        "source": 5,
+        "target": 11,
+        "value": 5
+      },
+      {
+        "source": 6,
+        "target": 12,
+        "value": 17
+      }
+    ]
+  }
+}

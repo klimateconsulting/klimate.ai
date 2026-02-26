@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "vintage": "CBP 2023",
+    "source": "U.S. Census Bureau",
+    "naics": [
+      "445",
+      "722"
+    ]
+  },
+  "kpis": [
+    {
+      "id": "ret_kpi_1",
+      "label": "Retail/Service Estab.",
+      "value": "874.8K",
+      "unit": "locations",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023"
+    },
+    {
+      "id": "ret_kpi_2",
+      "label": "Sector Employment",
+      "value": "16.0M",
+      "unit": "jobs",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023"
+    },
+    {
+      "id": "ret_kpi_3",
+      "label": "Annual Payroll",
+      "value": "$410.0B",
+      "unit": "",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023"
+    },
+    {
+      "id": "ret_kpi_4",
+      "label": "Largest Employer",
+      "value": "Restaurants & Eating Places",
+      "unit": "11.4M jobs",
+      "trend": "up",
+      "trendPct": "",
+      "source": "CBP 2023"
+    }
+  ],
+  "national": {
+    "establishments": 874830,
+    "employment": 15978725,
+    "payroll": 409971886000
+  },
+  "byState": [
+    {
+      "stateFips": "01",
+      "name": "Alabama",
+      "value": 10859,
+      "employment": 213410,
+      "payroll": 4600192000
+    },
+    {
+      "stateFips": "02",
+      "name": "Alaska",
+      "value": 2104,
+      "employment": 29609,
+      "payroll": 953204000
+    },
+    {
+      "stateFips": "04",
+      "name": "Arizona",
+      "value": 15476,
+      "employment": 348200,
+      "payroll": 9244271000
+    },
+    {
+      "stateFips": "05",
+      "name": "Arkansas",
+      "value": 6771,
+      "employment": 125424,
+      "payroll": 2642972000
+    },
+    {
+      "stateFips": "06",
+      "name": "California",
+      "value": 107245,
+      "employment": 1901380,
+      "payroll": 57835022000
+    },
+    {
+      "stateFips": "08",
+      "name": "Colorado",
+      "value": 16501,
+      "employment": 312353,
+      "payroll": 9367477000
+    },
+    {
+      "stateFips": "09",
+      "name": "Connecticut",
+      "value": 11051,
+      "employment": 167378,
+      "payroll": 4704186000
+    },
+    {
+      "stateFips": "10",
+      "name": "Delaware",
+      "value": 2869,
+      "employment": 52779,
+      "payroll": 1384968000
+    },
+    {
+      "stateFips": "11",
+      "name": "District of Columbia",
+      "value": 3249,
+      "employment": 66946,
+      "payroll": 2263820000
+    },
+    {
+      "stateFips": "12",
+      "name": "Florida",
+      "value": 54801,
+      "employment": 1132486,
+      "payroll": 29604533000
+    },
+    {
+      "stateFips": "13",
+      "name": "Georgia",
+      "value": 27406,
+      "employment": 537569,
+      "payroll": 12384038000
+    },
+    {
+      "stateFips": "15",
+      "name": "Hawaii",
+      "value": 4351,
+      "employment": 77401,
+      "payroll": 2381587000
+    },
+    {
+      "stateFips": "16",
+      "name": "Idaho",
+      "value": 4627,
+      "employment": 83192,
+      "payroll": 1885500000
+    },
+    {
+      "stateFips": "17",
+      "name": "Illinois",
+      "value": 34280,
+      "employment": 594408,
+      "payroll": 15716706000
+    },
+    {
+      "stateFips": "18",
+      "name": "Indiana",
+      "value": 15912,
+      "employment": 310534,
+      "payroll": 6548612000
+    },
+    {
+      "stateFips": "19",
+      "name": "Iowa",
+      "value": 7731,
+      "employment": 153431,
+      "payroll": 2933033000
+    },
+    {
+      "stateFips": "20",
+      "name": "Kansas",
+      "value": 7292,
+      "employment": 139611,
+      "payroll": 2930500000
+    },
+    {
+      "stateFips": "21",
+      "name": "Kentucky",
+      "value": 9752,
+      "employment": 197609,
+      "payroll": 4267714000
+    },
+    {
+      "stateFips": "22",
+      "name": "Louisiana",
+      "value": 11504,
+      "employment": 217400,
+      "payroll": 4809116000
+    },
+    {
+      "stateFips": "23",
+      "name": "Maine",
+      "value": 4220,
+      "employment": 64949,
+      "payroll": 1937460000
+    },
+    {
+      "stateFips": "24",
+      "name": "Maryland",
+      "value": 15752,
+      "employment": 284721,
+      "payroll": 7592522000
+    },
+    {
+      "stateFips": "25",
+      "name": "Massachusetts",
+      "value": 22215,
+      "employment": 378932,
+      "payroll": 11544977000
+    },
+    {
+      "stateFips": "26",
+      "name": "Michigan",
+      "value": 24792,
+      "employment": 422565,
+      "payroll": 9706681000
+    },
+    {
+      "stateFips": "27",
+      "name": "Minnesota",
+      "value": 13385,
+      "employment": 267035,
+      "payroll": 6411847000
+    },
+    {
+      "stateFips": "28",
+      "name": "Mississippi",
+      "value": 6861,
+      "employment": 126287,
+      "payroll": 2434958000
+    },
+    {
+      "stateFips": "29",
+      "name": "Missouri",
+      "value": 14545,
+      "employment": 291229,
+      "payroll": 6545138000
+    },
+    {
+      "stateFips": "30",
+      "name": "Montana",
+      "value": 3537,
+      "employment": 57098,
+      "payroll": 1386158000
+    },
+    {
+      "stateFips": "31",
+      "name": "Nebraska",
+      "value": 5115,
+      "employment": 96844,
+      "payroll": 1988268000
+    },
+    {
+      "stateFips": "32",
+      "name": "Nevada",
+      "value": 8438,
+      "employment": 180020,
+      "payroll": 5076032000
+    },
+    {
+      "stateFips": "33",
+      "name": "New Hampshire",
+      "value": 4017,
+      "employment": 77792,
+      "payroll": 2078698000
+    },
+    {
+      "stateFips": "34",
+      "name": "New Jersey",
+      "value": 28269,
+      "employment": 402547,
+      "payroll": 11449149000
+    },
+    {
+      "stateFips": "35",
+      "name": "New Mexico",
+      "value": 4455,
+      "employment": 92858,
+      "payroll": 2236358000
+    },
+    {
+      "stateFips": "36",
+      "name": "New York",
+      "value": 70984,
+      "employment": 921312,
+      "payroll": 28206009000
+    },
+    {
+      "stateFips": "37",
+      "name": "North Carolina",
+      "value": 26143,
+      "employment": 560435,
+      "payroll": 12703413000
+    },
+    {
+      "stateFips": "38",
+      "name": "North Dakota",
+      "value": 2159,
+      "employment": 34523,
+      "payroll": 770651000
+    },
+    {
+      "stateFips": "39",
+      "name": "Ohio",
+      "value": 28934,
+      "employment": 562552,
+      "payroll": 12165456000
+    },
+    {
+      "stateFips": "40",
+      "name": "Oklahoma",
+      "value": 9234,
+      "employment": 174422,
+      "payroll": 3575683000
+    },
+    {
+      "stateFips": "41",
+      "name": "Oregon",
+      "value": 13574,
+      "employment": 208402,
+      "payroll": 5809570000
+    },
+    {
+      "stateFips": "42",
+      "name": "Pennsylvania",
+      "value": 34053,
+      "employment": 575778,
+      "payroll": 12990601000
+    },
+    {
+      "stateFips": "44",
+      "name": "Rhode Island",
+      "value": 3743,
+      "employment": 59245,
+      "payroll": 1651646000
+    },
+    {
+      "stateFips": "45",
+      "name": "South Carolina",
+      "value": 13502,
+      "employment": 274881,
+      "payroll": 6089371000
+    },
+    {
+      "stateFips": "46",
+      "name": "South Dakota",
+      "value": 2463,
+      "employment": 44497,
+      "payroll": 921418000
+    },
+    {
+      "stateFips": "47",
+      "name": "Tennessee",
+      "value": 16549,
+      "employment": 347515,
+      "payroll": 8321666000
+    },
+    {
+      "stateFips": "48",
+      "name": "Texas",
+      "value": 71752,
+      "employment": 1518007,
+      "payroll": 36953780000
+    },
+    {
+      "stateFips": "49",
+      "name": "Utah",
+      "value": 7059,
+      "employment": 149844,
+      "payroll": 3365144000
+    },
+    {
+      "stateFips": "50",
+      "name": "Vermont",
+      "value": 1910,
+      "employment": 30493,
+      "payroll": 822307000
+    },
+    {
+      "stateFips": "51",
+      "name": "Virginia",
+      "value": 21489,
+      "employment": 419681,
+      "payroll": 10452197000
+    },
+    {
+      "stateFips": "53",
+      "name": "Washington",
+      "value": 20497,
+      "employment": 334710,
+      "payroll": 10702585000
+    },
+    {
+      "stateFips": "54",
+      "name": "West Virginia",
+      "value": 3797,
+      "employment": 66282,
+      "payroll": 1317518000
+    },
+    {
+      "stateFips": "55",
+      "name": "Wisconsin",
+      "value": 15963,
+      "employment": 265687,
+      "payroll": 5658516000
+    },
+    {
+      "stateFips": "56",
+      "name": "Wyoming",
+      "value": 1643,
+      "employment": 26462,
+      "payroll": 648658000
+    }
+  ],
+  "bySubsector": [
+    {
+      "id": "4451",
+      "name": "Grocery Stores",
+      "establishments": 99939,
+      "employment": 2974201,
+      "payroll": 87727154000
+    },
+    {
+      "id": "4452",
+      "name": "Specialty Food Stores",
+      "establishments": 23926,
+      "employment": 166164,
+      "payroll": 4535156000
+    },
+    {
+      "id": "4453",
+      "name": "Beer, Wine & Liquor Stores",
+      "establishments": 36433,
+      "employment": 193533,
+      "payroll": 5446519000
+    },
+    {
+      "id": "7223",
+      "name": "Special Food Services",
+      "establishments": 55221,
+      "employment": 805701,
+      "payroll": 24235802000
+    },
+    {
+      "id": "7224",
+      "name": "Drinking Places (Alcohol)",
+      "establishments": 40835,
+      "employment": 432542,
+      "payroll": 11078437000
+    },
+    {
+      "id": "7225",
+      "name": "Restaurants & Eating Places",
+      "establishments": 618476,
+      "employment": 11406584,
+      "payroll": 276948818000
+    }
+  ]
+}

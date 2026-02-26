@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "vintage": "2024",
+    "source": "USDA ERS / FAS",
+    "naics": []
+  },
+  "kpis": [
+    {
+      "id": "trade_kpi_1",
+      "label": "Total U.S. Food Imports",
+      "value": "$204.9B",
+      "unit": "(2024)",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS 2024"
+    },
+    {
+      "id": "trade_kpi_2",
+      "label": "Import Years Available",
+      "value": "1999\u20132024",
+      "unit": "",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS"
+    },
+    {
+      "id": "trade_kpi_3",
+      "label": "Top Import Category",
+      "value": "Beverages",
+      "unit": "$37.7B",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS 2024"
+    }
+  ],
+  "timeSeries": [
+    {
+      "year": 1999,
+      "imports": 41.0
+    },
+    {
+      "year": 2000,
+      "imports": 43.0
+    },
+    {
+      "year": 2001,
+      "imports": 43.5
+    },
+    {
+      "year": 2002,
+      "imports": 46.4
+    },
+    {
+      "year": 2003,
+      "imports": 52.2
+    },
+    {
+      "year": 2004,
+      "imports": 58.1
+    },
+    {
+      "year": 2005,
+      "imports": 64.1
+    },
+    {
+      "year": 2006,
+      "imports": 70.4
+    },
+    {
+      "year": 2007,
+      "imports": 76.4
+    },
+    {
+      "year": 2008,
+      "imports": 83.9
+    },
+    {
+      "year": 2009,
+      "imports": 76.6
+    },
+    {
+      "year": 2010,
+      "imports": 86.3
+    },
+    {
+      "year": 2011,
+      "imports": 102.0
+    },
+    {
+      "year": 2012,
+      "imports": 106.0
+    },
+    {
+      "year": 2013,
+      "imports": 108.8
+    },
+    {
+      "year": 2014,
+      "imports": 118.7
+    },
+    {
+      "year": 2015,
+      "imports": 120.1
+    },
+    {
+      "year": 2016,
+      "imports": 122.1
+    },
+    {
+      "year": 2017,
+      "imports": 130.1
+    },
+    {
+      "year": 2018,
+      "imports": 138.4
+    },
+    {
+      "year": 2019,
+      "imports": 140.4
+    },
+    {
+      "year": 2020,
+      "imports": 144.8
+    },
+    {
+      "year": 2021,
+      "imports": 170.7
+    },
+    {
+      "year": 2022,
+      "imports": 194.4
+    },
+    {
+      "year": 2023,
+      "imports": 189.2
+    },
+    {
+      "year": 2024,
+      "imports": 204.9
+    }
+  ],
+  "topExports": [
+    {
+      "name": "Soybeans",
+      "value": 28.0
+    },
+    {
+      "name": "Corn",
+      "value": 13.1
+    },
+    {
+      "name": "Beef & Veal",
+      "value": 10.0
+    },
+    {
+      "name": "Dairy",
+      "value": 8.1
+    },
+    {
+      "name": "Pork",
+      "value": 7.7
+    }
+  ],
+  "topImports": [
+    {
+      "name": "Beverages",
+      "value": 37.7
+    },
+    {
+      "name": "Fruits",
+      "value": 30.0
+    },
+    {
+      "name": "Fish and shellfish",
+      "value": 24.8
+    },
+    {
+      "name": "Vegetables",
+      "value": 21.4
+    },
+    {
+      "name": "Grains",
+      "value": 21.0
+    },
+    {
+      "name": "Other edible products",
+      "value": 20.7
+    },
+    {
+      "name": "Meats",
+      "value": 16.4
+    },
+    {
+      "name": "Vegetable oils",
+      "value": 13.4
+    },
+    {
+      "name": "Coffee, tea, and spices",
+      "value": 12.7
+    },
+    {
+      "name": "Cocoa and chocolate",
+      "value": 8.1
+    }
+  ]
+}

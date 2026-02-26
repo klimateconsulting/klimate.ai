@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "vintage": "2019",
+    "source": "USDA ERS Food Access Research Atlas",
+    "naics": []
+  },
+  "kpis": [
+    {
+      "id": "access_kpi_1",
+      "label": "LILA Census Tracts",
+      "value": "9.3K",
+      "unit": "tracts",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS"
+    },
+    {
+      "id": "access_kpi_2",
+      "label": "Population in LILA Tracts",
+      "value": "39.1M",
+      "unit": "people",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS"
+    },
+    {
+      "id": "access_kpi_3",
+      "label": "% Tracts LILA",
+      "value": "12.8%",
+      "unit": "of all tracts",
+      "trend": "up",
+      "trendPct": "",
+      "source": "USDA ERS"
+    }
+  ],
+  "byState": [
+    {
+      "stateFips": "01",
+      "name": "Alabama",
+      "value": 22.7,
+      "lilaTracts": 267,
+      "totalTracts": 1178,
+      "population": 4779736
+    },
+    {
+      "stateFips": "02",
+      "name": "Alaska",
+      "value": 19.8,
+      "lilaTracts": 33,
+      "totalTracts": 167,
+      "population": 710231
+    },
+    {
+      "stateFips": "04",
+      "name": "Arizona",
+      "value": 16.9,
+      "lilaTracts": 257,
+      "totalTracts": 1520,
+      "population": 6392017
+    },
+    {
+      "stateFips": "05",
+      "name": "Arkansas",
+      "value": 24.9,
+      "lilaTracts": 171,
+      "totalTracts": 686,
+      "population": 2915918
+    },
+    {
+      "stateFips": "06",
+      "name": "California",
+      "value": 6.7,
+      "lilaTracts": 536,
+      "totalTracts": 8024,
+      "population": 37253956
+    },
+    {
+      "stateFips": "08",
+      "name": "Colorado",
+      "value": 13.9,
+      "lilaTracts": 173,
+      "totalTracts": 1242,
+      "population": 5029196
+    },
+    {
+      "stateFips": "09",
+      "name": "Connecticut",
+      "value": 7.9,
+      "lilaTracts": 65,
+      "totalTracts": 828,
+      "population": 3574097
+    },
+    {
+      "stateFips": "10",
+      "name": "Delaware",
+      "value": 15.0,
+      "lilaTracts": 32,
+      "totalTracts": 214,
+      "population": 897934
+    },
+    {
+      "stateFips": "11",
+      "name": "District of Columbia",
+      "value": 6.7,
+      "lilaTracts": 12,
+      "totalTracts": 179,
+      "population": 601723
+    },
+    {
+      "stateFips": "12",
+      "name": "Florida",
+      "value": 13.2,
+      "lilaTracts": 550,
+      "totalTracts": 4182,
+      "population": 18801310
+    },
+    {
+      "stateFips": "13",
+      "name": "Georgia",
+      "value": 22.5,
+      "lilaTracts": 441,
+      "totalTracts": 1957,
+      "population": 9687653
+    },
+    {
+      "stateFips": "15",
+      "name": "Hawaii",
+      "value": 10.0,
+      "lilaTracts": 32,
+      "totalTracts": 321,
+      "population": 1360301
+    },
+    {
+      "stateFips": "16",
+      "name": "Idaho",
+      "value": 13.8,
+      "lilaTracts": 41,
+      "totalTracts": 298,
+      "population": 1567582
+    },
+    {
+      "stateFips": "17",
+      "name": "Illinois",
+      "value": 10.2,
+      "lilaTracts": 319,
+      "totalTracts": 3115,
+      "population": 12830632
+    },
+    {
+      "stateFips": "18",
+      "name": "Indiana",
+      "value": 19.3,
+      "lilaTracts": 291,
+      "totalTracts": 1507,
+      "population": 6483802
+    },
+    {
+      "stateFips": "19",
+      "name": "Iowa",
+      "value": 10.3,
+      "lilaTracts": 85,
+      "totalTracts": 823,
+      "population": 3046355
+    },
+    {
+      "stateFips": "20",
+      "name": "Kansas",
+      "value": 18.1,
+      "lilaTracts": 139,
+      "totalTracts": 766,
+      "population": 2853118
+    },
+    {
+      "stateFips": "21",
+      "name": "Kentucky",
+      "value": 13.8,
+      "lilaTracts": 153,
+      "totalTracts": 1110,
+      "population": 4339367
+    },
+    {
+      "stateFips": "22",
+      "name": "Louisiana",
+      "value": 22.9,
+      "lilaTracts": 258,
+      "totalTracts": 1129,
+      "population": 4533372
+    },
+    {
+      "stateFips": "23",
+      "name": "Maine",
+      "value": 8.5,
+      "lilaTracts": 30,
+      "totalTracts": 351,
+      "population": 1328361
+    },
+    {
+      "stateFips": "24",
+      "name": "Maryland",
+      "value": 9.4,
+      "lilaTracts": 131,
+      "totalTracts": 1390,
+      "population": 5773552
+    },
+    {
+      "stateFips": "25",
+      "name": "Massachusetts",
+      "value": 7.6,
+      "lilaTracts": 112,
+      "totalTracts": 1467,
+      "population": 6547629
+    },
+    {
+      "stateFips": "26",
+      "name": "Michigan",
+      "value": 12.3,
+      "lilaTracts": 339,
+      "totalTracts": 2756,
+      "population": 9883640
+    },
+    {
+      "stateFips": "27",
+      "name": "Minnesota",
+      "value": 14.4,
+      "lilaTracts": 192,
+      "totalTracts": 1334,
+      "population": 5303925
+    },
+    {
+      "stateFips": "28",
+      "name": "Mississippi",
+      "value": 31.6,
+      "lilaTracts": 208,
+      "totalTracts": 659,
+      "population": 2967297
+    },
+    {
+      "stateFips": "29",
+      "name": "Missouri",
+      "value": 17.8,
+      "lilaTracts": 248,
+      "totalTracts": 1391,
+      "population": 5988927
+    },
+    {
+      "stateFips": "30",
+      "name": "Montana",
+      "value": 13.3,
+      "lilaTracts": 36,
+      "totalTracts": 271,
+      "population": 989415
+    },
+    {
+      "stateFips": "31",
+      "name": "Nebraska",
+      "value": 10.3,
+      "lilaTracts": 55,
+      "totalTracts": 532,
+      "population": 1826341
+    },
+    {
+      "stateFips": "32",
+      "name": "Nevada",
+      "value": 7.2,
+      "lilaTracts": 49,
+      "totalTracts": 680,
+      "population": 2700551
+    },
+    {
+      "stateFips": "33",
+      "name": "New Hampshire",
+      "value": 13.0,
+      "lilaTracts": 38,
+      "totalTracts": 292,
+      "population": 1316470
+    },
+    {
+      "stateFips": "34",
+      "name": "New Jersey",
+      "value": 5.4,
+      "lilaTracts": 108,
+      "totalTracts": 2002,
+      "population": 8791894
+    },
+    {
+      "stateFips": "35",
+      "name": "New Mexico",
+      "value": 25.3,
+      "lilaTracts": 126,
+      "totalTracts": 498,
+      "population": 2059179
+    },
+    {
+      "stateFips": "36",
+      "name": "New York",
+      "value": 4.0,
+      "lilaTracts": 194,
+      "totalTracts": 4870,
+      "population": 19378102
+    },
+    {
+      "stateFips": "37",
+      "name": "North Carolina",
+      "value": 16.2,
+      "lilaTracts": 353,
+      "totalTracts": 2175,
+      "population": 9535483
+    },
+    {
+      "stateFips": "38",
+      "name": "North Dakota",
+      "value": 8.3,
+      "lilaTracts": 17,
+      "totalTracts": 205,
+      "population": 672591
+    },
+    {
+      "stateFips": "39",
+      "name": "Ohio",
+      "value": 14.3,
+      "lilaTracts": 421,
+      "totalTracts": 2943,
+      "population": 11536504
+    },
+    {
+      "stateFips": "40",
+      "name": "Oklahoma",
+      "value": 16.9,
+      "lilaTracts": 177,
+      "totalTracts": 1046,
+      "population": 3751351
+    },
+    {
+      "stateFips": "41",
+      "name": "Oregon",
+      "value": 12.1,
+      "lilaTracts": 100,
+      "totalTracts": 826,
+      "population": 3831074
+    },
+    {
+      "stateFips": "42",
+      "name": "Pennsylvania",
+      "value": 7.4,
+      "lilaTracts": 238,
+      "totalTracts": 3210,
+      "population": 12702379
+    },
+    {
+      "stateFips": "44",
+      "name": "Rhode Island",
+      "value": 5.4,
+      "lilaTracts": 13,
+      "totalTracts": 241,
+      "population": 1052567
+    },
+    {
+      "stateFips": "45",
+      "name": "South Carolina",
+      "value": 20.0,
+      "lilaTracts": 218,
+      "totalTracts": 1091,
+      "population": 4625364
+    },
+    {
+      "stateFips": "46",
+      "name": "South Dakota",
+      "value": 14.4,
+      "lilaTracts": 32,
+      "totalTracts": 222,
+      "population": 814180
+    },
+    {
+      "stateFips": "47",
+      "name": "Tennessee",
+      "value": 17.9,
+      "lilaTracts": 266,
+      "totalTracts": 1489,
+      "population": 6346105
+    },
+    {
+      "stateFips": "48",
+      "name": "Texas",
+      "value": 19.5,
+      "lilaTracts": 1022,
+      "totalTracts": 5238,
+      "population": 25145561
+    },
+    {
+      "stateFips": "49",
+      "name": "Utah",
+      "value": 8.4,
+      "lilaTracts": 49,
+      "totalTracts": 585,
+      "population": 2763885
+    },
+    {
+      "stateFips": "50",
+      "name": "Vermont",
+      "value": 6.6,
+      "lilaTracts": 12,
+      "totalTracts": 183,
+      "population": 625741
+    },
+    {
+      "stateFips": "51",
+      "name": "Virginia",
+      "value": 14.3,
+      "lilaTracts": 269,
+      "totalTracts": 1886,
+      "population": 8001024
+    },
+    {
+      "stateFips": "53",
+      "name": "Washington",
+      "value": 12.0,
+      "lilaTracts": 174,
+      "totalTracts": 1445,
+      "population": 6724540
+    },
+    {
+      "stateFips": "54",
+      "name": "West Virginia",
+      "value": 13.6,
+      "lilaTracts": 66,
+      "totalTracts": 484,
+      "population": 1852994
+    },
+    {
+      "stateFips": "55",
+      "name": "Wisconsin",
+      "value": 9.6,
+      "lilaTracts": 133,
+      "totalTracts": 1392,
+      "population": 5686986
+    },
+    {
+      "stateFips": "56",
+      "name": "Wyoming",
+      "value": 9.2,
+      "lilaTracts": 12,
+      "totalTracts": 131,
+      "population": 563626
+    }
+  ]
+}
